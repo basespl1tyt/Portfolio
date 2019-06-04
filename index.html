@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>David Pham</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <style>
+            /* Home Page */ 
+            body {
+                background-color:#222;
+                font-family: 'Montserrat', helvetica, sans-serif;
+            }
+
+            .typing {
+                margin: 300px 150px 300px 150px;
+            }
+            .wrap {
+                color: #fff;
+                font-size: 2em;
+            }
+            p {
+                font-size: 0.6em; 
+                margin-top: 10px; 
+                color: #a5a5a5;
+                width: 600px; 
+                line-height: 20px; 
+            }
+
+            .ok {
+                text-align: center; 
+            }
+            .ok p {
+                color: #dcdcdc;
+                font-size: 1em;
+                margin-left: calc(50% - 300px);
+                margin-top: 20px;
+                margin-bottom: 30px; 
+            }
+
+            div.ok{
+            background-color: #555;
+            color: #fff;
+            padding-top: 50px; 
+
+            }
+
+            @media screen and (max-width: 902px) {
+                .wrap {
+                    font-size: 1.2em
+                }
+                .typing {
+                    margin: 300px 0 0 0;
+                    text-align: center;
+
+                }
+                .typing p {
+                    text-align: center;
+                    font-size: 0.6em;
+                    margin-top: 10px; 
+                    width: 500px; 
+                    margin-left: calc(50% - 250px);
+                }
+                .ok p {
+                    width: 400px; 
+                    margin-left: calc(50% - 200px);
+                }
+            }
+            /* Scroll Down Button */ 
+            *,
+            :after,
+            :before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            }
+
+            section {
+            height: 100vh;
+            width: 100%;
+            display: table;
+            
+            }
+
+            .scroll-down {
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            margin-left: -16px;
+            display: block;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #FFF;
+            background-size: 14px auto;
+            border-radius: 50%;
+            z-index: 2;
+            -webkit-animation: bounce 2s infinite 2s;
+            animation: bounce 2s infinite 2s;
+            -webkit-transition: all .2s ease-in;
+            transition: all .2s ease-in;
+            transform: scale(1)
+            }
+
+            .scroll-down:before {
+                position: absolute;
+                top: calc(50% - 8px);
+                left: calc(50% - 6px);
+                transform: rotate(-45deg);
+                display: block;
+                width: 12px;
+                height: 12px;
+                content: "";
+                border: 2px solid white;
+                border-width: 0px 0 2px 2px;
+            }
+
+            @keyframes bounce {
+            0%,
+            100%,
+            20%,
+            50%,
+            80% {
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+            }
+            40% {
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+            60% {
+                -webkit-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                transform: translateY(-5px);
+            }
+            }      
+            /* Logos */ 
+            * {
+            box-sizing: border-box;
+            }
+            .imgs {
+                margin: 0 30% 0 30%; 
+                padding-bottom: 40px; 
+            }
+            .column {
+            float: left;
+            width: 20%;
+            padding: 2px;
+            }
+
+
+            /* Clearfix (clear floats) */
+            .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            } 
+        </style>
+   </head>
+   <body>
+        <section>
+            <div class="typing">
+                <h1>
+                    <a class="typewrite" data-period="2000" data-type='[ "experienced" , "dedicated ", "competitive ", "organized", "well-versed " ]'>
+                        <span class="wrap"></span>
+                    </a>
+                    <p>Front End Developer / CodePen / Github</p>
+                    <br>
+                    <p>Hi! I'm David, a junior front-end developer. I am fluent in html, css, and javascript. Every time I'm given a new assignemnt, I focus on writing clean, elegant, and more efficinet code.</p>
+                </h1>  
+                <a href="#ok" class="scroll-down" address="true"></a> 
+            </div>
+        </section>
+        <div class="ok" id="ok">
+            <h1>Skills</h1>
+            <p>I have multi-year experience creating dynamic, responsive, and high-quality websites.</p>
+            <div class="imgs">
+                <div class="row">
+                    <div class="column">
+                        <img src="HTML5.png" alt="HTML5" style="width:40px">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="column">
+                        <img src="CSS3.png" alt="CSS3" style="width:40px">
+                        <p>CSS3</p>
+                    </div>
+                    <div class="column">
+                        <img src="JavaScript.png" alt="JavaScript" style="width:40px">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="column">
+                            <img src="Performance.png" alt="Performance" style="width:40px">
+                            <p>Performance</p>
+                    </div>
+                    <div class="column">
+                            <img src="Animation.png" alt="Animation" style="width:40px">
+                            <p>Animation</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <section>
+        </section>
+     </body>
+   <script>
+       /* Typing Script */ 
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">David is '+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+    </script>
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+        
+                // Store hash
+                var hash = this.hash;
+        
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                scrollTop: $(hash).offset().top
+                }, 800, function(){
+            
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+                });
+            } // End if
+            });
+        });
+   </script>
+</html>
