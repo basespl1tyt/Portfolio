@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <style>
             /* Home Page */ 
@@ -38,34 +39,28 @@
                 margin-top: 20px;
                 margin-bottom: 30px; 
             }
-
+            .ok h1 {
+                color: #fff;
+                padding-top: 50px; 
+                font-size: 2em;
+                }
+            img.round {
+            border-radius: 50%;
+            }
             div.ok{
             background-color: #555;
             color: #fff;
-            padding-top: 50px; 
 
             }
 
-            @media screen and (max-width: 902px) {
-                .wrap {
-                    font-size: 1.2em
-                }
-                .typing {
-                    margin: 300px 0 0 0;
-                    text-align: center;
+            .ok h2 {
+                font-size: 4em;
+                margin-top: 0.5em;
+                color: white;
+            }
 
-                }
-                .typing p {
-                    text-align: center;
-                    font-size: 0.6em;
-                    margin-top: 10px; 
-                    width: 500px; 
-                    margin-left: calc(50% - 250px);
-                }
-                .ok p {
-                    width: 400px; 
-                    margin-left: calc(50% - 200px);
-                }
+            .theirsite {
+                width: 1300px;
             }
             /* Scroll Down Button */ 
             *,
@@ -157,18 +152,166 @@
             clear: both;
             display: table;
             } 
+
+            /* Social Icons */ 
+            a {
+                text-decoration: none;
+                color: rgb(3, 172, 250);
+            }
+            p > a:hover{
+                color: #d9d9d9;
+            }
+
+            ._12 {
+                font-size: 1em;
+            }
+            ._14 {
+                font-size: 1em;
+            }
+            ul {
+                padding:0;
+                list-style: none;
+            }
+            .footer-social-icons {
+                display:block;
+                margin: 0 auto;
+                margin-top: 10px;
+            }
+            .social-icon {
+                color: #fff;
+            }
+            ul.social-icons {
+                margin-top: 10px;
+            }
+            .social-icons li {
+                vertical-align: top;
+                display: inline;
+            }
+            .social-icons a {
+                color: #fff;
+                text-decoration: none;
+            }
+            .fa-facebook {
+                padding:10px 14px;
+                -o-transition:.5s;
+                -ms-transition:.5s;
+                -moz-transition:.5s;
+                -webkit-transition:.5s;
+                transition: .5s;
+            }
+            .fa-facebook:hover {
+                background-color: #3d5b99;
+            }
+            .fa-twitter {
+                padding:10px 12px;
+                -o-transition:.5s;
+                -ms-transition:.5s;
+                -moz-transition:.5s;
+                -webkit-transition:.5s;
+                transition: .5s;
+            }
+            .fa-twitter:hover {
+                background-color: #00aced;
+            }
+            .fa-youtube {
+                padding:10px 14px;
+                -o-transition:.5s;
+                -ms-transition:.5s;
+                -moz-transition:.5s;
+                -webkit-transition:.5s;
+                transition: .5s;
+            }
+            .fa-youtube:hover {
+                background-color: #e64a41;
+            }
+            .fa-linkedin {
+                padding:10px 14px;
+                -o-transition:.5s;
+                -ms-transition:.5s;
+                -moz-transition:.5s;
+                -webkit-transition:.5s;
+                transition: .5s;
+            }
+            .fa-linkedin:hover {
+                background-color: #0073a4;
+            }
+            .fa-google-plus {
+                padding:10px 9px;
+                -o-transition:.5s;
+                -ms-transition:.5s;
+                -moz-transition:.5s;
+                -webkit-transition:.5s;
+                transition: .5s;
+            }
+            .fa-google-plus:hover {
+                background-color: #e25714;
+            }
+
+            /* Responsiveness */ 
+
+            @media screen and (max-width: 375px) { /* Iphone X */ 
+                .wrap {
+                    font-size: 1.2em;
+                    width: 150px; 
+                }
+                .typing {
+                    margin: 150px 0 0 0;
+                    text-align: center;
+                }
+                .typing p {
+                    text-align: center;
+                    font-size: 0.6em;
+                    margin-top: 10px; 
+                    width: 200px; 
+                    margin-left: calc(50% - 100px);
+                }
+                .ok p {
+                    width: 200px; 
+                    margin-left: calc(50% - 100px);
+                }
+                .theirsite {
+                    width: 275px;
+                    margin-top: 40px;
+                }
+                .social-icons {
+                    margin-top: 30px!important;
+                }
+                span.wrap {
+                    margin-bottom: 100px!important;
+                }
+                .imgs {
+                    margin: 0 5% 0 5% 0!important; 
+                }
+            }
+            @media screen and (max-width: 1024px) { /* Ipad Pro */ 
+                .theirsite {
+                    width: 1000px;
+                }
+                section.ok {
+                    height: 70vh;
+                }
+            }
         </style>
    </head>
    <body>
         <section>
             <div class="typing">
                 <h1>
-                    <a class="typewrite" data-period="2000" data-type='[ "experienced" , "dedicated ", "competitive ", "organized", "well-versed " ]'>
+                    <a class="typewrite" data-period="2000" data-type='[ "unique." , "attractive.", "modern.", "organized." ]'>
                         <span class="wrap"></span>
                     </a>
                     <p>Front End Developer / CodePen / Github</p>
                     <br>
                     <p>Hi! I'm David, a junior front-end developer. I am fluent in html, css, and javascript. Every time I'm given a new assignemnt, I focus on writing clean, elegant, and more efficinet code.</p>
+                    <div class="footer-social-icons">
+                        <ul class="social-icons">
+                            <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/davidonthereg" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://youtube.com/basespl1tyt" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/david-pham-5a8b0b160" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
                 </h1>  
                 <a href="#ok" class="scroll-down" address="true"></a> 
             </div>
@@ -179,29 +322,35 @@
             <div class="imgs">
                 <div class="row">
                     <div class="column">
-                        <img src="HTML5.png" alt="HTML5" style="width:40px">
+                        <img src="HTML5.png" alt="HTML5" style="height:40px">
                         <p>HTML5</p>
                     </div>
                     <div class="column">
-                        <img src="CSS3.png" alt="CSS3" style="width:40px">
+                        <img src="CSS3.png" alt="CSS3" style="height:40px">
                         <p>CSS3</p>
                     </div>
                     <div class="column">
-                        <img src="JavaScript.png" alt="JavaScript" style="width:40px">
+                        <img src="JavaScript.png" alt="JavaScript" style="height:40px">
                         <p>JavaScript</p>
                     </div>
                     <div class="column">
-                            <img src="Performance.png" alt="Performance" style="width:40px">
+                            <img src="Performance.png" alt="Performance" style="height:40px">
                             <p>Performance</p>
                     </div>
                     <div class="column">
-                            <img src="Animation.png" alt="Animation" style="width:40px">
+                            <img src="Animation.png" alt="Animation" style="height:40px">
                             <p>Animation</p>
                     </div>
                 </div>
             </div>
         </div>  
-        <section>
+        <section class="ok">
+            <h1>Testimonials</h1>
+            <h2>&rdquo;</h2>
+            <p>David is very easy to work with. His quality of work is pretty good and he is very knowlegable and experienced. </p>
+            <img class="round" src="img_avatar.png" alt="Avatar" style="width:100px">
+            <p>Josh. B, <a href="">Twitch Streamer</a></p>
+            <img src="BeaniePoster.png" alt="Animation" class="theirsite">
         </section>
      </body>
    <script>
@@ -226,7 +375,7 @@ var TxtType = function(el, toRotate, period) {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
-        this.el.innerHTML = '<span class="wrap">David is '+this.txt+'</span>';
+        this.el.innerHTML = '<span class="wrap">David&apos;s projects are '+this.txt+'</span>';
 
         var that = this;
         var delta = 200 - Math.random() * 100;
