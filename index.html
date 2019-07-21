@@ -1,635 +1,147 @@
 <!DOCTYPE html>
-<html>
-   <head>
-        <title>David Pham</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <style>
-            /* Home Page */ 
-            body {
-                background-color: #000;
-                font-family: 'Montserrat', helvetica, sans-serif;
-                color: #000;
-                height: 100vh;
-            }
-
-            section.tophalf {
-                background-color: #000;
-                background-size: cover; 
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: center;
-
-            }
-
-            .typing {
-                margin: 300px 150px 300px 150px;
-            }
-            .wrap {
-                color: #fff;
-                font-size: 2em;
-            }
-            p {
-                font-size: 16px; 
-                margin-top: 10px; 
-                color: #a5a5a5;
-                width: 600px; 
-                line-height: 20px; 
-            }
-
-            .half-right h1 {
-                padding-top: 50px; 
-                font-size: 2em; 
-                color: #ed462f;
-            }
-
-            .ok {
-                text-align: center; 
-            }
-            .ok p {
-                color: #dcdcdc;
-                font-size: 1em;
-                margin-left: calc(50% - 300px);
-                margin-top: 20px;
-                margin-bottom: 30px; 
-            }
-            .ok h1 {
-                color: #ed462f;
-                padding-top: 50px; 
-                font-size: 2em;
-                }
-            img.round {
-            border-radius: 50%;
-            }
-            div.ok{
-            background-color: #000;
-            color: #fff;
-            }
-
-            .ok h2 {
-                font-size: 4em;
-                margin-top: 0.5em;
-                color: white;
-            }
-
-            .theirsite {
-                width: 1300px;
-            }
-
-            /* Scroll Down Button */ 
-            *,
-            :after,
-            :before {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            }
-
-            section {
-            height: 100vh;
-            width: 100%;
-            display: table;
-            
-            }
-
-            .scroll-down {
-            position: absolute;
-            bottom: 70px;
-            left: 50%;
-            margin-left: -16px;
-            display: block;
-            width: 32px;
-            height: 32px;
-            border: 2px solid #FFF;
-            background-size: 14px auto;
-            border-radius: 50%;
-            z-index: 2;
-            -webkit-animation: bounce 2s infinite 2s;
-            animation: bounce 2s infinite 2s;
-            -webkit-transition: all .2s ease-in;
-            transition: all .2s ease-in;
-            transform: scale(1)
-            }
-
-            .scroll-down:before {
-                position: absolute;
-                top: calc(50% - 8px);
-                left: calc(50% - 6px);
-                transform: rotate(-45deg);
-                display: block;
-                width: 12px;
-                height: 12px;
-                content: "";
-                border: 2px solid white;
-                border-width: 0px 0 2px 2px;
-            }
-
-            @keyframes bounce {
-            0%,
-            100%,
-            20%,
-            50%,
-            80% {
-                -webkit-transform: translateY(0);
-                -ms-transform: translateY(0);
-                transform: translateY(0);
-            }
-            40% {
-                -webkit-transform: translateY(-10px);
-                -ms-transform: translateY(-10px);
-                transform: translateY(-10px);
-            }
-            60% {
-                -webkit-transform: translateY(-5px);
-                -ms-transform: translateY(-5px);
-                transform: translateY(-5px);
-            }
-            }      
-
-            /* Logos */ 
-            * {
-            box-sizing: border-box;
-            }
-            .imgs {
-                margin: 0 30% 0 30%; 
-                padding-bottom: 40px; 
-            }
-            .column {
-            float: left;
-            width: 20%;
-            padding: 2px;
-            }
-
-
-            /* Clearfix (clear floats) */
-            .row::after {
-            content: "";
-            clear: both;
-            display: table;
-            } 
-
-            /* Social Icons */ 
-            a {
-                text-decoration: none;
-                color: rgb(3, 172, 250);
-            }
-            p > a:hover{
-                color: #d9d9d9;
-            }
-
-            ._12 {
-                font-size: 1em;
-            }
-            ._14 {
-                font-size: 1em;
-            }
-            ul {
-                padding:0;
-                list-style: none;
-            }
-            .footer-social-icons {
-                display:block;
-                margin: 0 auto;
-                margin-top: 10px;
-            }
-            .social-icon {
-                color: #fff;
-            }
-            ul.social-icons {
-                margin-top: 10px;
-            }
-            .social-icons li {
-                vertical-align: top;
-                display: inline;
-            }
-            .social-icons a {
-                color: #fff;
-                text-decoration: none;
-            }
-            .fa-facebook {
-                padding:10px 14px;
-                -o-transition:.5s;
-                -ms-transition:.5s;
-                -moz-transition:.5s;
-                -webkit-transition:.5s;
-                transition: .5s;
-            }
-            .fa-facebook:hover {
-                background-color: #3d5b99;
-            }
-            .fa-twitter {
-                padding:10px 12px;
-                -o-transition:.5s;
-                -ms-transition:.5s;
-                -moz-transition:.5s;
-                -webkit-transition:.5s;
-                transition: .5s;
-            }
-            .fa-twitter:hover {
-                background-color: #00aced;
-            }
-            .fa-youtube {
-                padding:10px 14px;
-                -o-transition:.5s;
-                -ms-transition:.5s;
-                -moz-transition:.5s;
-                -webkit-transition:.5s;
-                transition: .5s;
-            }
-            .fa-youtube:hover {
-                background-color: #e64a41;
-            }
-            .fa-linkedin {
-                padding:10px 14px;
-                -o-transition:.5s;
-                -ms-transition:.5s;
-                -moz-transition:.5s;
-                -webkit-transition:.5s;
-                transition: .5s;
-            }
-            .fa-linkedin:hover {
-                background-color: #0073a4;
-            }
-            .fa-google-plus {
-                padding:10px 9px;
-                -o-transition:.5s;
-                -ms-transition:.5s;
-                -moz-transition:.5s;
-                -webkit-transition:.5s;
-                transition: .5s;
-            }
-            .fa-google-plus:hover {
-                background-color: #e25714;
-            }
-
-            /* Responsiveness */ 
-
-
-            @media screen and (max-width: 375px) { /* Iphone X */ 
-                .wrap {
-                    font-size: 1.2em;
-                    width: 150px; 
-                }
-                .typing {
-                    margin: 150px 0 0 0;
-                    text-align: center;
-                }
-                .typing p {
-                    text-align: center;
-                    font-size: 0.6em;
-                    margin-top: 10px; 
-                    width: 200px; 
-                    margin-left: calc(50% - 100px);
-                }
-                .ok p {
-                    width: 200px; 
-                    margin-left: calc(50% - 100px);
-                }
-                .theirsite {
-                    width: 275px;
-                    margin-top: 40px;
-                }
-                .social-icons {
-                    margin-top: 30px!important;
-                }
-                span.wrap {
-                    margin-bottom: 100px!important;
-                }
-                .imgs {
-                    margin: 0 5% 0 5% 0!important; 
-                }
-            }
-            @media screen and (max-width: 1024px) { /* Ipad Pro */ 
-                .theirsite {
-                    width: 1000px;
-                }
-            }
-
-            /* Resizing */ 
-
-            .container {
-            max-width: 2880px;
-            margin: 0 auto;
-            }
-            article {
-            padding: 1em;
-            }
-            header,
-            footer {
-            background-color: #421953;
-            padding: 1em;
-            height: 60px;
-            }
-            .content {
-            width: calc(1000vw -40);
-            height: 180px;
-            background-color: #F9A134;
-            padding: 1em;
-            }
-            header {
-            grid-area: header;
-            }
-            footer {
-            grid-area: footer;
-            }
-            .grid-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr ;
-            grid-template-rows: auto;
-            grid-template-areas: "left-half right-half";
-            }
-            .half-left {
-            grid-area: left-half;
-            background-color: #000;
-            padding: 2em;
-            }
-            .half-right {
-            grid-area: right-half;
-            background-color: #000;
-            padding: 2em;
-            }
-            .grid-wrapper-equal-thirds {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr ;
-            grid-template-rows: auto auto ;
-            grid-template-areas: "left-third middle-third right-third";
-            }
-            .grid-wrapper-equal-fourths {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr ;
-            grid-template-rows: auto auto auto auto ;
-            grid-template-areas: "one-fourth" "one-fourth" "one-fourth" "one-fourth";
-            }
-            .one-fourth {
-            background-color: #72CCD2;
-            padding: 2em;
-            }
-            .left-third, .middle-third, .right-third {
-            background-color: #A0CF67;
-            padding: 2em;
-            margin-bottom: 0;
-            }
-            .grid-wrapper-two-thirds {
-            display: grid;
-            grid-template-columns: 
-                66% 1fr;
-            grid-template-rows: auto auto;
-            grid-template-areas: "left-two-thirds right-one-third";
-            }
-            .left-two-thirds, .right-one-third {
-            background-color: #414141;
-            padding: 1em;
-            margin-bottom: 0;
-            padding: 2em;
-            }
-
-            .grid-wrapper-right-two-thirds {
-            display: grid;
-            grid-template-columns: 
-                1fr 66%;
-            grid-template-rows: auto auto;
-            grid-template-areas: "left-one-third right-two-thirds";
-            }
-            .left-one-third, .right-two-thirds {
-            background-color:  #2c3e50  ;
-            padding: 1em;
-            margin-bottom: 0;
-            padding: 2em;
-            }
-
-            @media screen and (max-width: 700px) {
-                .grid-wrapper {
-                display: block;
-                }
-            .left-half, .right-half {
-            }
-                .grid-wrapper-equal-thirds {
-                display: block;
-                }
-            .left-third, .middle-third, .right-third  {
-            }
-            .grid-wrapper-two-thirds {
-                display: block;
-            }
-            .left-two-thirds, .right-one-third    {
-            }
-            .grid-wrapper-right-two-thirds {
-                display: block;
-                }
-            .left-one-third , .right-two-thirds {
-            }
-            .grid-wrapper-equal-fourths {
-                display: block;
-                }
-            }
-        </style>
-   </head>
-   <body>
-        <section class="tophalf">
-            <div class="typing">
-                <h1>
-                    <a class="typewrite" data-period="2000" data-type='[ "unique." , "attractive.", "modern.", "organized." ]'>
-                        <span class="wrap"></span>
-                    </a>
-                    <p>Front End Developer / CodePen / Github</p>
-                    <br>
-                    <p>Hi! I'm David, a junior front-end developer. I am fluent in html, css, and javascript. Every time I'm given a new assignemnt, I focus on writing clean, elegant, and more efficinet code.</p>
-                    <div class="footer-social-icons">
-                        <ul class="social-icons">
-                            <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://twitter.com/davidonthereg" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://youtube.com/basespl1tyt" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/david-pham-5a8b0b160" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </h1>  
-                <a href="#ok" class="scroll-down" address="true"></a> 
-            </div>
-        </section>
-        <div class="ok" id="ok">
-            <h1>Skills</h1>
-            <p>I have multi-year experience creating dynamic, responsive, and high-quality websites.</p>
-            <div class="imgs">
-                <div class="row">
-                    <div class="column">
-                        <img src="HTML5.png" alt="HTML5" style="height:40px">
-                        <p>HTML5</p>
-                    </div>
-                    <div class="column">
-                        <img src="CSS3.png" alt="CSS3" style="height:40px">
-                        <p>CSS3</p>
-                    </div>
-                    <div class="column">
-                        <img src="JavaScript.png" alt="JavaScript" style="height:40px">
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="column">
-                            <img src="Performance.png" alt="Performance" style="height:40px">
-                            <p>Performance</p>
-                    </div>
-                    <div class="column">
-                            <img src="Animation.png" alt="Animation" style="height:40px">
-                            <p>Animation</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Davidonthereg</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading-grid-wrapper">
+            <article class="heading-half-left">
+                <div class="sameline">
+                    <img src="assets/code-fork-symbol.svg" class="logoicn" alt="link icon" height="35" width="35">
+                    <h1 class="logonm">Davidonthereg</h1>
+                </article>
+            </article>
+            <article class="heading-half-right">
+                <div class="sameline">
+                    <div class="right">
+                        <a href="" class="nava">Portfolio</a>
+                        <a href="" class="nava">Pricing</a>
+                        <button onclick="window.location.href='profile.html'" class="btn btn-4 btn-4a btnorange">Hire Me</button>
                     </div>
                 </div>
-            </div>
+            </article>
         </div> 
-        <div class="container">
-            <div class="grid-wrapper">
-              <article class="half-left">
-                Left half
-              </article>
-              <article class="half-right">
-                <h1>Fake Beanie</h1>
-                <p>Launching a Twitch Streamer's Portfolio</p>
-                <p>Beanie, a part-time Twitch Streamer had a vision for </p>
-              </article>
-             </div> 
-            <div class="content">Content</div>
-            <div class="grid-wrapper-equal-thirds">
-              <article class="left-third">
-                Left third
-              </article>
-              <article class="middle-third">
-                middle third
-              </article>
-              <article class="right-third">
-                Right third
-              </article>
-             </div>
-             <div class="grid-wrapper-equal-fourths">
-              <article class="one-fourth">
-                one fourth
-              </article>
-               <article class="one-fourth">
-                one fourth
-               </article>
-                 <article class="one-fourth">
-                one fourth
-              </article>
-                 <article class="one-fourth">
-                one fourth
-              </article>
-              </div>
-            <div class="content">Content</div>
-            <div class="grid-wrapper">
-              <article class="half-left">
-                Left half
-              </article>
-              <article class="half-right">
-                Right half
-              </article>
-             </div>
-              <div class="grid-wrapper-right-two-thirds">
-            <article class="left-one-third">
-                Left one third
-              </article>
-              <article class="right-two-thirds">
-                Right two thirds
-              </article>
-            </div>
-             <div class="content">Content</div>
-            <div class="grid-wrapper-two-thirds">
+        <div class="grid-wrapper-two-thirds">
             <article class="left-two-thirds">
-                Left two thirds
-              </article>
-              <article class="right-one-third">
-                Right one third
-              </article>
+                <h1 class="david-title"><b>Design, Code, Deploy.</b></h1>
+                <p class="desc descwidth">Lorem ipsum sit dolar amet is a dummy text used by the typography industry</p>
+                <button onclick="window.location.href='profile.html'" class="btn btn-4 btn-4a btnblue">Get Started</button>
+            </article>
+            <article class="right-one-third">
+                <img src="assets/profile.png" class="profileicon" alt="link icon" height="700">
+            </article>
+        </div>
+        <div class="grid-wrapper-equal-fifth">
+            <article class="one-fifth">
+                <img src="assets/behance-Logo.png" class="logoicn" alt="behance logo" height="35">
+            </article>
+            <article class="one-fifth">
+                <img src="assets/Github-Logo.png" class="logoicn" alt="github logo" height="35">
+            </article>
+            <article class="one-fifth">
+                <img src="assets/codepen-Logo.png" class="logoicn" alt="codepen logo" height="35">
+            </article>
+            <article class="one-fifth">
+                <img src="assets/bulma-Logo.png" class="logoicn" alt="bulma logo" height="35">
+            </article>
+            <article class="one-fifth">
+                <img src="assets/dribbble-Logo.png" class="logoicn" alt="dribbble logo" height="35">
+            </article>
+        </div>
+        <div class="content-grey">
+            <h1 class="heading heading-center">Great Power Comes</h1>
+            <p class="subbeading subheading-center">With great Responsibility</p>
+            <div class="margin margin-center"></div>
+            <div class="grid-wrapper-equal-thirds">
+                <article class="left-third">
+                    <h4>New Features</h4>
+                    <img src="assets/innovation.svg" class="logoicn" alt="features icn" height="85">
+                    <p>Lorem ipsum sit dolor amet is a dummy text</p>
+                </article>
+                <article class="middle-third">
+                    <h4>Responsive</h4>
+                    <img src="assets/monitor.svg" class="logoicn" alt="responsive icn" height="85">
+                    <p>Lorem ipsum sit dolor amet is a dummy text</p>
+                </article>
+                <article class="right-third">
+                    <h4>Future Proof</h4>
+                    <img src="assets/company-vision.svg" class="logoicn" alt="future icn" height="85">
+                    <p>Lorem ipsum sit dolor amet is a dummy text</p>
+                </article>
             </div>
-            
-            <footer>Footer</footer>
-              </div>
-            
-             
-     </body>
-   <script>
-       /* Typing Script */ 
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">David&apos;s projects are '+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
-    </script>
-    <script>
-        $(document).ready(function(){
-            // Add smooth scrolling to all links
-            $("a").on('click', function(event) {
-        
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
-        
-                // Store hash
-                var hash = this.hash;
-        
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                scrollTop: $(hash).offset().top
-                }, 800, function(){
-            
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-                });
-            } // End if
-            });
-        });
-   </script>
+        </div>
+        <div class="grid-wrapper">
+            <article class="half-left">
+                <h1 class="heading">Delivering on Time</h1>
+                <p class="subbeading">This is how I do it</p>
+                <div class="margin"></div>
+            </article>
+            <article class="half-right">
+                <div class="sameline spaceup">
+                    <img src="/assets/blueprint.svg" alt="blueprint" width="100" class="space">
+                    <div>
+                        <h4>Design</h4>
+                        <p>Lorem ipsum sit dolor amet is a dummy text used by typography industry</p>
+                    </div>
+                </div>
+                <div class="sameline spaceup">
+                    <img src="/assets/layers.svg" alt="layers" width="100" class="space">
+                    <div>
+                        <h4>Code</h4>
+                        <p>Lorem ipsum sit dolor amet is a dummy text used by typography industry</p>
+                    </div>
+                </div>
+                <div class="sameline spaceup">
+                    <img src="/assets/send.svg" alt="send" width="100" class="space">
+                    <div>
+                        <h4>Deploy</h4>
+                        <p>Lorem ipsum sit dolor amet is a dummy text used by typography industry</p>
+                    </div>
+                </div>
+            </article>
+        </div> 
+        <div class="content-grey center">
+            <img src="/assets/sample.png" alt="sample" width="90%" class="sample">
+            <h1 class="heading heading-center spaceup">Latest Project</h1>
+            <p class="subbeading subheading-center">Website revamp for thick.at image uploader</p>
+            <button href="https://basespl1tyt.github.io/thick.at" class="btn btn-4 btn-4a btnorange">Visit Site</button>
+        </div>
+        <div class="content">
+            <h1 class="heading heading-center whitetxt">Client Testimonals</h1>
+            <p class="subbeading subheading-center whitetxt">Hear why people love us</p>
+            <div class="grid-wrapper-equal-thirds">
+                <article class="left-third-test">
+                    <h3>"Lorem ipsum sit dolor amet is a dummy text amet is a dummy text amet is a dummy text amet is a dummy text"</h3>
+                    <img src="/assets/person1.JPG" alt="send" height="100" class="round">
+                </article>
+                <article class="middle-third-test">
+                    <h3>"Lorem ipsum sit dolor amet is a dummy text amet is a dummy text amet is a dummy text amet is a dummy text"</h3>
+                    <img src="/assets/person2.JPG" alt="send" height="100" class="round">
+                </article>
+                <article class="right-third-test">
+                    <h3>"Lorem ipsum sit dolor amet is a dummy text amet is a dummy text amet is a dummy text amet is a dummy text"</h3>
+                    <img src="/assets/person3.JPG" alt="send" height="100" class="round">
+                </article>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-social-icons">
+                <ul class="social-icons">
+                    <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/davidonthereg" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://youtube.com/basespl1tyt" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/david-pham-5a8b0b160" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>        
+</body>
 </html>
