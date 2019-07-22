@@ -460,13 +460,13 @@ ul.social-icons {
 
 @media screen and (max-width: 768px) {
     .grid-wrapper {
-    display: block;
+        display: block;
     }
     .left-half, .right-half {
         margin: 0;
     }
     .grid-wrapper-equal-thirds {
-    display: block;
+        display: block;
     }
     .grid-wrapper-two-thirds {
         display: block;
@@ -500,7 +500,7 @@ ul.social-icons {
     }
     .grid-wrapper-right-two-thirds {
         display: block;
-        }
+    }
     .left-one-third , .right-two-thirds {
         margin-bottom: 0;
     }

@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" href="assets/code-fork-symbol.svg">
+    <link rel="icon" href="https://i.thick.at/SelfExplanatoryTarsier.png">
     <title>Davidonthereg</title>
+    <style> 
+        @media only screen and (max-width: 768px) { 
+            .heading-grid-wrapper {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -22,9 +29,11 @@
             <article class="heading-half-right">
                 <div class="sameline">
                     <div class="right">
-                        <a href="" class="nava">Portfolio</a>
-                        <a href="" class="nava">Pricing</a>
-                        <button onclick="window.location.href='profile.html'" class="btn btn-4 btn-4a btnorange">Hire Me</button>
+                        <nav class="topnav" id="myTopnav">
+                            <a href="" class="nava">Portfolio</a>
+                            <a href="" class="nava">Pricing</a>
+                            <button onclick="window.location.href='profile.html'" class="btn btn-4 btn-4a btnorange">Hire Me</button>
+                        </nav>
                     </div>
                 </div>
             </article>
@@ -143,6 +152,16 @@
                 </ul>
             </div>
         </footer>
-    </div>        
+    </div>
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    </script>        
 </body>
 </html>
