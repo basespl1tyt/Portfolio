@@ -447,9 +447,10 @@ ul.social-icons {
     }
     .left-two-thirds {
         padding: 0 0 0 12%;
+        margin: 110px 0 0 0;
     }
     .profileicon {
-        margin: 190px 0 0 -55%;
+        margin: 290px 0 0 -85%;
     }
     .half-left {
         padding: 130px 0 0 10%;
@@ -480,7 +481,10 @@ ul.social-icons {
     }
     .grid-wrapper-equal-thirds {
         display: block;
+        width: auto;
+        margin-left: 0;
     }
+
     .grid-wrapper-two-thirds {
         display: block;
     }
@@ -491,11 +495,33 @@ ul.social-icons {
     }
     .profileicon {
         margin: -100px 0 0 0;
-        height: 250px;
+        height: 350px;
     }
     .heading {
         font-size: 1.2em;
-        width: 1;
+        width: 250px;
+    }
+    .subbeading {
+        width: 140px;
+    }    
+    .subheading-center {
+        text-align: center;
+        margin-left: calc(50% - 70px);
+    }
+    .descwidth {
+        width: 360px;
+        margin-left: calc(50% - 180px)!important;
+    }
+    
+    .descwidth {
+        margin-left: calc(50% - 180px);
+    }
+    .profileicon {
+        height: 270px;
+    }
+    .heading-center {
+        width: auto;
+        margin-left: auto;
     }
     .grid-wrapper-equal-fifth {
         padding: 160px 0 0 0;
@@ -507,10 +533,10 @@ ul.social-icons {
         margin-left: calc(50% - 117px);
     }
     .half-left {
-        padding: 70px 0 0 32%;
+        padding: 70px 0 0 14%;
     }
     .half-right {
-        padding: 70px 15% 200px 15%;
+        padding: 70px 0% 200px 0%;
     }
     .left-third-test, .middle-third-test, .right-third-test {
         margin-left: calc(50% - 116px);
@@ -528,5 +554,10 @@ ul.social-icons {
 }
 
 @media screen and (max-width: 425px) {
-
+    .left-two-thirds, .right-one-third {
+        margin: 130px 0 0 0;
+    }
+    .grid-wrapper-equal-fifth {
+        padding: auto;
+    }   
 }
